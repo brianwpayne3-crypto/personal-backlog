@@ -132,7 +132,15 @@ This project is intentionally allowed to be funny and small. It is useful partly
 
 I am also trying to figure out how to represent what I actually do now.
 
-My résumé covers the traditional engineering-leadership history. The more interesting missing layer is the judgment underneath it: architecture and product decisions, operating through ambiguity, systems of record, build-vs-buy, migration/cutover thinking, transformation, and this newer agentic way of working.
+My résumé covers the traditional engineering-leadership history. What it does not communicate as well is the perspective underneath that history.
+
+I have worked in both large, matrixed organizations and small/startup environments. I have been hired into and worked within technology organizations, product organizations, and design organizations. At eBay, for example, I led a technology services group inside a large design organization, where we built **Largo**, a prototyping and testing platform for the eBay marketplace's buyer experience.
+
+That range is important to how I think about engineering leadership. I do not see engineering as a downstream implementation function. Product, design and engineering should shape problems together and share responsibility for outcomes.
+
+I am a strong proponent of design thinking, user research, and building software around the person using it rather than forcing the person to understand and conform to the internal model of the software. I can go deep enough technically to make architecture and implementation decisions and build working software, but technical sophistication is not the goal by itself.
+
+The more interesting missing layer in my public story is therefore the judgment underneath the résumé: operating through ambiguity, understanding users and workflows, architecture and product decisions, systems of record, build-vs-buy, migration/cutover thinking, organizational design, transformation, and this newer agentic way of working.
 
 There is probably both an engineering-leadership version and a consulting/business-transformation version of that story. I want design help making it coherent rather than simply adding more text to a website.
 
