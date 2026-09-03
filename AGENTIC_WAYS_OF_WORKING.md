@@ -168,6 +168,69 @@ Batch category 3 into predictable decision windows where practical rather than c
 
 > **AI should reduce the cost of implementation without increasing the organizational cost of coordination.**
 
+## Codex prompt identity and usage measurement
+
+As of September 2026, AI execution capacity itself has become a meaningful operational constraint. Codex usage limits and their calculation can change while active development is underway, so the workflow needs durable instrumentation rather than relying on conversational memory or impressions.
+
+### Every substantive Codex prompt gets an ID
+
+ChatGPT-generated prompts intended for substantive Codex work should automatically receive a unique identifier at the top of the prompt:
+
+`CX-YYYYMMDD-NNN`
+
+Example: `CX-20260903-001`.
+
+The ID is global across projects rather than specific to PedalFish/BCBG so usage can be compared across all Codex work.
+
+This identifier is the join key between:
+
+- the exact prompt/instructions given to Codex;
+- the repo/project and issue/task;
+- Codex usage readings;
+- the resulting work/output;
+- later analysis of prompt efficiency and ways of working.
+
+Do not rely on chat history to reconstruct this later.
+
+### Usage record for substantive runs
+
+Where readings are available, record:
+
+- Prompt ID
+- date/time
+- repo/project
+- issue/task
+- prompt text or durable reference to it
+- model/mode/reasoning/speed where relevant
+- task classification (investigation, implementation, testing, refactor, migration, etc.)
+- 5-hour usage before and after
+- weekly usage before and after
+- outcome (completed / partial / failed)
+- meaningful work accomplished
+- notable context such as retries, unusually large repo/context, tests, or tool-heavy execution
+
+### Optimize for accomplished work, not minimum usage
+
+The useful metric is not simply percentage consumed per prompt. A high-cost prompt that completely solves a difficult problem can be more efficient than several lower-cost prompts that collectively accomplish less.
+
+Evaluate **useful work accomplished per percentage point of allowance**, alongside reliability and quality.
+
+Over time, use the data to answer questions such as:
+
+- Do broad autonomous prompts cost disproportionately more than tightly scoped prompts?
+- Is inspect + implement + test in one run more or less efficient than staged prompts?
+- Which task types consume the most allowance?
+- Does large accumulated context materially increase usage?
+- Do retries or failed approaches dominate cost?
+- Which prompt structures yield the most completed work per allowance consumed?
+- At what actual workload does Plus become an operational constraint and Pro become economically justified?
+
+### Initial observed datapoint
+
+On 2026-09-03, one substantive Codex task consumed approximately **59% of the available five-hour window**. The historical prompt was not assigned a CX identifier, so this is retained as a pre-instrumentation datapoint rather than falsely linking it to a reconstructed prompt.
+
+This observation is one reason prompt-level instrumentation is now part of the operating model.
+
 ## Measures of team effectiveness need to change
 
 Traditional velocity becomes even less useful as an effectiveness measure when agentic tools make software output highly variable and cheap.
@@ -269,6 +332,7 @@ This is not a finished methodology. Important questions include:
 - How should managers distinguish productive learning/rework from careless churn?
 - How does this model change when the business itself cannot supply decisions or validation at the required pace?
 - What team size/topology best exploits reduced translation cost while retaining deep specialist expertise?
+- How should AI usage limits and pricing be treated as an operational capacity constraint when agentic execution is embedded in the development process?
 
 ## Source threads
 
